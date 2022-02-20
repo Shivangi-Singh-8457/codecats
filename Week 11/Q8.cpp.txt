@@ -1,0 +1,23 @@
+/*-----------Remove_at_Index----------*/
+void removeAt(int pos){ 
+    node* temp=head;
+    if(pos==0)
+    {
+        head=head->next;
+        temp->next=NULL;
+        free(temp);
+    }
+    else{
+    int count=0;
+    node* t;
+    while(count<pos-1)
+    {
+        temp=temp->next;
+        count++;
+    }
+      t=temp->next;
+      temp->next=t->next;
+      t->next=NULL;
+      free(t);
+    }
+} 

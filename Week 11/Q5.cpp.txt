@@ -1,0 +1,7 @@
+/*-----------Add_First-----------*/
+void addFirst(int val){
+    node* newnode=new node;
+    newnode->val=val;
+    newnode->next=head;
+    head=newnode;
+}

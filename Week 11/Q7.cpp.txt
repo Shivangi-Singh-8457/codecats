@@ -1,0 +1,12 @@
+/*----------Remove_Last----------*/
+void removeLast(){
+    node* t=head;
+    node* temp=head->next;
+    while(temp->next!=NULL)
+    {
+        t=t->next;
+        temp=temp->next;
+    }
+    t->next=NULL;
+    free(temp);
+}

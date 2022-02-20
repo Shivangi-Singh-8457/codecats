@@ -1,0 +1,18 @@
+/*------Reverse_List_(Data Iterative)------*/
+void reverse_di(){
+    int i=0;
+    int j=size()-1;
+    node* left;
+    node* right;
+    int temp;
+    while(i<j)
+    {
+       left=getAt(i);
+       right=getAt(j);
+       temp=left->val;
+       left->val=right->val;
+       right->val=temp;
+       i++;
+       j--;
+    }
+}

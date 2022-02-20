@@ -1,0 +1,29 @@
+/*---------Get_Value---------*/
+void getFirst(){
+    cout<<head->val<<endl;
+ }
+
+void getLast(){
+    
+        node* temp=new node();
+        temp=head;
+        while(temp->next!=NULL)
+        {
+            temp=temp->next;
+        }
+        cout<<temp->val<<endl;
+   
+}
+
+void getAt(int p){
+        int count=0;
+        node* temp=new node();
+        temp=head;
+        while(count<p)
+        {
+            temp=temp->next;
+            count++;
+        }
+        cout<<temp->val<<endl;
+   
+}

@@ -1,0 +1,18 @@
+/*---------Add_Last----------*/
+void addLast(int n)
+  {
+    node* temp=new node();
+    temp->data=n;
+    temp->next=NULL;
+    if(size==0)
+    {
+      head=temp;
+      tail=temp;
+    }
+    else
+    {
+      tail->next=temp;
+      tail=temp;
+    }
+    size++;
+  }

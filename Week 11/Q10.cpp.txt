@@ -1,0 +1,14 @@
+/*-------Reverse_List_(Pointer Iterative)--------*/
+void reverse_di(){
+    node* curr=head;
+    node* prev=NULL;
+    node* nxt;
+    while(curr!=NULL)
+    {
+        nxt=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=nxt;
+    }
+    head=prev;
+}

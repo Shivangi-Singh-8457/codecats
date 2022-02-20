@@ -1,0 +1,21 @@
+/*----------Add_at_Index-----------*/
+void addAt(int pos,int data){
+    int count=0;
+    node* temp=head;
+    node* newnode=new node;
+    newnode->val=data;
+    if(pos==0)
+    {
+        newnode->next=head;
+        head=newnode;
+    }
+    else{
+    while(count<pos-1)
+    {
+       temp=temp->next;
+       count++;
+    }
+    newnode->next=temp->next;
+    temp->next=newnode;
+    }
+}
